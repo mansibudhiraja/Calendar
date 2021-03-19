@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect
-from cs50 import SQL
+import sqlite3
 
 app = Flask(__name__)
 
-db = SQL("sqlite:///events.db")
+db = sqlite3.connect("sqlite:///events.db")
 
 
 
